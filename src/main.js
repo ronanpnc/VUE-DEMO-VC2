@@ -10,13 +10,21 @@ import StepperView from "./components/views/StepperView.vue";
 import AutoCompleteView from "./components/views/AutoCompleteView.vue";
 import CardsView from "./components/views/CardsView.vue";
 import ExpansionPanelView from "./components/views/ExpansionPanelView.vue";
+import DialogView from "./components/views/DialogView.vue";
+
+import BaseButton from "./components/ui/BaseButton.vue";
+import BaseDialog from "./components/ui/BaseDialog.vue";
 
 Vue.use(VueRouter);
-Vue.config.productionTip = false;
 
+Vue.component("base-dialog", BaseDialog);
+Vue.component("base-button", BaseButton);
+
+Vue.config.productionTip = false;
 const router = new VueRouter({
   routes: [
     { path: "/expansion", component: ExpansionPanelView },
+    { path: "/dialog", component: DialogView },
     { path: "/cards", component: CardsView },
     { path: "/table", component: TableView },
     { path: "/autocomplete", component: AutoCompleteView },

@@ -1,6 +1,13 @@
 <template>
   <v-list nav dense>
     <v-list-item-group active-class="deep-purple--text text--accent-4">
+      <v-list-item :to="{ path: '/dialog' }">
+        <v-list-item-icon>
+          <v-icon>mdi-instagram</v-icon>
+        </v-list-item-icon>
+        <v-list-item-title>Dialog</v-list-item-title>
+      </v-list-item>
+
       <v-list-item :to="{ path: '/expansion' }">
         <v-list-item-icon>
           <v-icon>mdi-arrow-expand</v-icon>
